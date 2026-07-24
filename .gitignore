@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/
+.cursor/
+data/raw/
+data/silver/
+data/gold/*.parquet
+web/node_modules/
+web/.next/
+.env
+*.parquet

@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  /* Industrial dark — gunmetal + molten orange + steel blue */
+  --bg: #0e1116;
+  --panel: #171b22;
+  --panel-2: #1e242e;
+  --text: #e8ecf1;
+  --muted: #8b939e;
+  --steel: #5b8fa8;
+  --molten: #f0772a;
+  --molten-hot: #ff9a4d;
+  --primary: #5b8fa8;
+  --accent: #f0772a;
+  --good: #3dba86;
+  --bad: #e05a5a;
+  --border: rgba(255, 255, 255, 0.08);
+  --background: var(--bg);
+  --foreground: var(--text);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-panel: var(--panel);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-good: var(--good);
+  --color-bad: var(--bad);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--molten) 40%, transparent);
+}
+
+.glass-panel {
+  background: color-mix(in srgb, var(--panel) 88%, transparent);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
